@@ -1,0 +1,57 @@
+{
+    "name":"Germany",
+    "topLevelDomain":[
+                      ".de"
+                      ],
+    "alpha2Code":"DE",
+    "alpha3Code":"DEU",
+    "callingCodes":[
+                    "49"
+                    ],
+    "capital":"Berlin",
+    "altSpellings":[
+                    "DE",
+                    "Federal Republic of Germany",
+                    "Bundesrepublik Deutschland"
+                    ],
+    "relevance":"3",
+    "region":"Europe",
+    "subregion":"Western Europe",
+    "translations":{
+        "de":"Deutschland",
+        "es":"Alemania",
+        "fr":"Allemagne",
+        "ja":"ドイツ",
+        "it":"Germania"
+    },
+    "population":81083600,
+    "latlng":[
+              51.0,
+              9.0
+              ],
+    "demonym":"German",
+    "area":357114.0,
+    "gini":28.3,
+    "timezones":[
+                 "UTC+01:00"
+                 ],
+    "borders":[
+               "AUT",
+               "BEL",
+               "CZE",
+               "DNK",
+               "FRA",
+               "LUX",
+               "NLD",
+               "POL",
+               "CHE"
+               ],
+    "nativeName":"Deutschland",
+    "numericCode":"276",
+    "currencies":[
+                  "EUR"
+                  ],
+    "languages":[
+                 "de"
+                 ]
+}

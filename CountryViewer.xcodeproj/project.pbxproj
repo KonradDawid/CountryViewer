@@ -11,7 +11,6 @@
 		71258EF91DF1E135002E0D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71258EF81DF1E135002E0D8A /* Assets.xcassets */; };
 		71258EFC1DF1E135002E0D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71258EFA1DF1E135002E0D8A /* LaunchScreen.storyboard */; };
 		71258F071DF1E135002E0D8A /* CountryViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F061DF1E135002E0D8A /* CountryViewerTests.swift */; };
-		71258F121DF1E135002E0D8A /* CountryViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F111DF1E135002E0D8A /* CountryViewerUITests.swift */; };
 		71258F251DF1E42D002E0D8A /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F241DF1E42D002E0D8A /* CountriesViewController.swift */; };
 		71258F271DF1E454002E0D8A /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F261DF1E454002E0D8A /* CountriesViewModel.swift */; };
 		71258F291DF1E461002E0D8A /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F281DF1E461002E0D8A /* CountryViewModel.swift */; };
@@ -26,20 +25,20 @@
 		71258F3C1DF1E5A5002E0D8A /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F3B1DF1E5A5002E0D8A /* CustomError.swift */; };
 		71258F3E1DF1E5B3002E0D8A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F3D1DF1E5B3002E0D8A /* Extensions.swift */; };
 		71258F401DF1E8CD002E0D8A /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F3F1DF1E8CD002E0D8A /* CountriesService.swift */; };
+		71258F441DF1EA32002E0D8A /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F431DF1EA32002E0D8A /* TestCase.swift */; };
+		71258F471DF1EAA1002E0D8A /* FakeCountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F461DF1EAA1002E0D8A /* FakeCountriesService.swift */; };
+		71258F491DF1EAFC002E0D8A /* CountriesVewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F481DF1EAFC002E0D8A /* CountriesVewModelTests.swift */; };
+		71258F4B1DF1EB2E002E0D8A /* CountriesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F4A1DF1EB2E002E0D8A /* CountriesViewControllerTests.swift */; };
+		71258F4D1DF1EB4D002E0D8A /* CountryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71258F4C1DF1EB4D002E0D8A /* CountryViewModelTests.swift */; };
+		71258F4F1DF1EB64002E0D8A /* cam.json in Resources */ = {isa = PBXBuildFile; fileRef = 71258F4E1DF1EB64002E0D8A /* cam.json */; };
+		71258F511DF1EB71002E0D8A /* germany.json in Resources */ = {isa = PBXBuildFile; fileRef = 71258F501DF1EB71002E0D8A /* germany.json */; };
+		71258F531DF1EB7A002E0D8A /* usa.json in Resources */ = {isa = PBXBuildFile; fileRef = 71258F521DF1EB7A002E0D8A /* usa.json */; };
 		AFCB2E491D4C4C7DC00E40D3 /* Pods_CountryViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522FE21061AC8D1B5D30D7B5 /* Pods_CountryViewer.framework */; };
 		E13056A65DCA95133099B129 /* Pods_CountryViewer_CountryViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DEBC6A830F5C4507C1683A /* Pods_CountryViewer_CountryViewerTests.framework */; };
-		F889DB2B01486574BFEA2509 /* Pods_CountryViewer_CountryViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4B2A04D3D969199DEC05D7 /* Pods_CountryViewer_CountryViewerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		71258F031DF1E135002E0D8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 71258EE61DF1E135002E0D8A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71258EED1DF1E135002E0D8A;
-			remoteInfo = CountryViewer;
-		};
-		71258F0E1DF1E135002E0D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 71258EE61DF1E135002E0D8A /* Project object */;
 			proxyType = 1;
@@ -63,9 +62,6 @@
 		71258F021DF1E135002E0D8A /* CountryViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountryViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71258F061DF1E135002E0D8A /* CountryViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewerTests.swift; sourceTree = "<group>"; };
 		71258F081DF1E135002E0D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71258F0D1DF1E135002E0D8A /* CountryViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountryViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71258F111DF1E135002E0D8A /* CountryViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewerUITests.swift; sourceTree = "<group>"; };
-		71258F131DF1E135002E0D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71258F241DF1E42D002E0D8A /* CountriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		71258F261DF1E454002E0D8A /* CountriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		71258F281DF1E461002E0D8A /* CountryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
@@ -80,6 +76,14 @@
 		71258F3B1DF1E5A5002E0D8A /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		71258F3D1DF1E5B3002E0D8A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		71258F3F1DF1E8CD002E0D8A /* CountriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
+		71258F431DF1EA32002E0D8A /* TestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		71258F461DF1EAA1002E0D8A /* FakeCountriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCountriesService.swift; sourceTree = "<group>"; };
+		71258F481DF1EAFC002E0D8A /* CountriesVewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesVewModelTests.swift; sourceTree = "<group>"; };
+		71258F4A1DF1EB2E002E0D8A /* CountriesViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesViewControllerTests.swift; sourceTree = "<group>"; };
+		71258F4C1DF1EB4D002E0D8A /* CountryViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewModelTests.swift; sourceTree = "<group>"; };
+		71258F4E1DF1EB64002E0D8A /* cam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cam.json; sourceTree = "<group>"; };
+		71258F501DF1EB71002E0D8A /* germany.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = germany.json; sourceTree = "<group>"; };
+		71258F521DF1EB7A002E0D8A /* usa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = usa.json; sourceTree = "<group>"; };
 		9EC4E8B8C1DA1CB31E398AC9 /* Pods-CountryViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountryViewer/Pods-CountryViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		A717AA3CF0E40A5B7B841790 /* Pods-CountryViewer-CountryViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryViewer-CountryViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountryViewer-CountryViewerUITests/Pods-CountryViewer-CountryViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EF4B2A04D3D969199DEC05D7 /* Pods_CountryViewer_CountryViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryViewer_CountryViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,14 +103,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13056A65DCA95133099B129 /* Pods_CountryViewer_CountryViewerTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71258F0A1DF1E135002E0D8A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F889DB2B01486574BFEA2509 /* Pods_CountryViewer_CountryViewerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +137,6 @@
 			children = (
 				71258EF01DF1E135002E0D8A /* CountryViewer */,
 				71258F051DF1E135002E0D8A /* CountryViewerTests */,
-				71258F101DF1E135002E0D8A /* CountryViewerUITests */,
 				71258EEF1DF1E135002E0D8A /* Products */,
 				2F8560715E5792A10017D7B9 /* Pods */,
 				29D2542E6ACE0E6763828584 /* Frameworks */,
@@ -153,7 +148,6 @@
 			children = (
 				71258EEE1DF1E135002E0D8A /* CountryViewer.app */,
 				71258F021DF1E135002E0D8A /* CountryViewerTests.xctest */,
-				71258F0D1DF1E135002E0D8A /* CountryViewerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,19 +172,13 @@
 		71258F051DF1E135002E0D8A /* CountryViewerTests */ = {
 			isa = PBXGroup;
 			children = (
+				71258F421DF1EA18002E0D8A /* TestCase */,
+				71258F451DF1EA87002E0D8A /* FakeObjects */,
+				71258F411DF1EA08002E0D8A /* Stubs */,
 				71258F061DF1E135002E0D8A /* CountryViewerTests.swift */,
 				71258F081DF1E135002E0D8A /* Info.plist */,
 			);
 			path = CountryViewerTests;
-			sourceTree = "<group>";
-		};
-		71258F101DF1E135002E0D8A /* CountryViewerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				71258F111DF1E135002E0D8A /* CountryViewerUITests.swift */,
-				71258F131DF1E135002E0D8A /* Info.plist */,
-			);
-			path = CountryViewerUITests;
 			sourceTree = "<group>";
 		};
 		71258F1F1DF1E331002E0D8A /* ViewController */ = {
@@ -249,6 +237,35 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		71258F411DF1EA08002E0D8A /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				71258F4E1DF1EB64002E0D8A /* cam.json */,
+				71258F521DF1EB7A002E0D8A /* usa.json */,
+				71258F501DF1EB71002E0D8A /* germany.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		71258F421DF1EA18002E0D8A /* TestCase */ = {
+			isa = PBXGroup;
+			children = (
+				71258F431DF1EA32002E0D8A /* TestCase.swift */,
+				71258F481DF1EAFC002E0D8A /* CountriesVewModelTests.swift */,
+				71258F4A1DF1EB2E002E0D8A /* CountriesViewControllerTests.swift */,
+				71258F4C1DF1EB4D002E0D8A /* CountryViewModelTests.swift */,
+			);
+			path = TestCase;
+			sourceTree = "<group>";
+		};
+		71258F451DF1EA87002E0D8A /* FakeObjects */ = {
+			isa = PBXGroup;
+			children = (
+				71258F461DF1EAA1002E0D8A /* FakeCountriesService.swift */,
+			);
+			path = FakeObjects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,27 +310,6 @@
 			productReference = 71258F021DF1E135002E0D8A /* CountryViewerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		71258F0C1DF1E135002E0D8A /* CountryViewerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 71258F1C1DF1E135002E0D8A /* Build configuration list for PBXNativeTarget "CountryViewerUITests" */;
-			buildPhases = (
-				9ABF6A43902250C3A170139E /* [CP] Check Pods Manifest.lock */,
-				71258F091DF1E135002E0D8A /* Sources */,
-				71258F0A1DF1E135002E0D8A /* Frameworks */,
-				71258F0B1DF1E135002E0D8A /* Resources */,
-				CD99611299B34B24A94424E0 /* [CP] Embed Pods Frameworks */,
-				93F3C9D39B72F267C17A9C83 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				71258F0F1DF1E135002E0D8A /* PBXTargetDependency */,
-			);
-			name = CountryViewerUITests;
-			productName = CountryViewerUITests;
-			productReference = 71258F0D1DF1E135002E0D8A /* CountryViewerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -329,11 +325,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					71258F011DF1E135002E0D8A = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 71258EED1DF1E135002E0D8A;
-					};
-					71258F0C1DF1E135002E0D8A = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 71258EED1DF1E135002E0D8A;
@@ -355,7 +346,6 @@
 			targets = (
 				71258EED1DF1E135002E0D8A /* CountryViewer */,
 				71258F011DF1E135002E0D8A /* CountryViewerTests */,
-				71258F0C1DF1E135002E0D8A /* CountryViewerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -374,13 +364,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71258F0B1DF1E135002E0D8A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				71258F4F1DF1EB64002E0D8A /* cam.json in Resources */,
+				71258F511DF1EB71002E0D8A /* germany.json in Resources */,
+				71258F531DF1EB7A002E0D8A /* usa.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,36 +418,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountryViewer-CountryViewerTests/Pods-CountryViewer-CountryViewerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		93F3C9D39B72F267C17A9C83 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountryViewer-CountryViewerUITests/Pods-CountryViewer-CountryViewerUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9ABF6A43902250C3A170139E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		A9CC7D79EC3FB597C6409426 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,21 +446,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CD99611299B34B24A94424E0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountryViewer-CountryViewerUITests/Pods-CountryViewer-CountryViewerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8E87BCD7D6F553249AD9287 /* [CP] Embed Pods Frameworks */ = {
@@ -551,15 +492,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71258F471DF1EAA1002E0D8A /* FakeCountriesService.swift in Sources */,
+				71258F4D1DF1EB4D002E0D8A /* CountryViewModelTests.swift in Sources */,
+				71258F4B1DF1EB2E002E0D8A /* CountriesViewControllerTests.swift in Sources */,
+				71258F491DF1EAFC002E0D8A /* CountriesVewModelTests.swift in Sources */,
 				71258F071DF1E135002E0D8A /* CountryViewerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71258F091DF1E135002E0D8A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71258F121DF1E135002E0D8A /* CountryViewerUITests.swift in Sources */,
+				71258F441DF1EA32002E0D8A /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,11 +508,6 @@
 			isa = PBXTargetDependency;
 			target = 71258EED1DF1E135002E0D8A /* CountryViewer */;
 			targetProxy = 71258F031DF1E135002E0D8A /* PBXContainerItemProxy */;
-		};
-		71258F0F1DF1E135002E0D8A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71258EED1DF1E135002E0D8A /* CountryViewer */;
-			targetProxy = 71258F0E1DF1E135002E0D8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -737,34 +670,6 @@
 			};
 			name = Release;
 		};
-		71258F1D1DF1E135002E0D8A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 067C6F3ACE7E931EFD70A11E /* Pods-CountryViewer-CountryViewerUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = CountryViewerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KonradDawid.CountryViewerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = CountryViewer;
-			};
-			name = Debug;
-		};
-		71258F1E1DF1E135002E0D8A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A717AA3CF0E40A5B7B841790 /* Pods-CountryViewer-CountryViewerUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = CountryViewerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KonradDawid.CountryViewerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = CountryViewer;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -791,15 +696,6 @@
 			buildConfigurations = (
 				71258F1A1DF1E135002E0D8A /* Debug */,
 				71258F1B1DF1E135002E0D8A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		71258F1C1DF1E135002E0D8A /* Build configuration list for PBXNativeTarget "CountryViewerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				71258F1D1DF1E135002E0D8A /* Debug */,
-				71258F1E1DF1E135002E0D8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
