@@ -16,7 +16,4 @@ target 'CountryViewer' do
    pod 'SwiftyJSON'
   end
 
-  target 'CountryViewerUITests' do
-  end
-
 end
