@@ -5,15 +5,15 @@ target 'CountryViewer' do
   use_frameworks!
 
    pod 'RxSwift'
-   pod 'RxCocoa’
+   pod 'RxCocoa'
    pod 'SnapKit'
    pod 'Alamofire'
-   pod 'SwiftyJSON'
+   pod 'SwiftyJSON', '~> 3.0.0'
 
   target 'CountryViewerTests' do
-   pod 'RxCocoa’
+   pod 'RxCocoa'
    pod 'SnapKit'
-   pod 'SwiftyJSON'
+   pod 'SwiftyJSON', '~> 3.0.0'
   end
 
 end

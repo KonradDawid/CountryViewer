@@ -1,0 +1,11 @@
+language: objective-c
+osx_image: xcode8
+xcode_workspace: CountryViewer.xcworkspace
+xcode_scheme: CountryViewer
+
+before_install:
+ - pod repo update
+ 
+script:
+ - xcodebuild clean build -workspace CountryViewer.xcworkspace -scheme CountryViewerTests -destination "platform=iOS Simulator,name=iPhone 6" build test
+ 
