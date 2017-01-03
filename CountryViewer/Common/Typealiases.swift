@@ -10,5 +10,6 @@ import Foundation
 
 
 typealias Action = () -> ()
-typealias CountryAction = (Country) -> ()
+typealias CountryAction = (CountryMO) -> ()
+typealias Code = String
 

@@ -13,15 +13,20 @@ import RxSwift
 class CountriesViewControllerTests: TestCase {
     
     var sut: CountriesViewController!
+    var persistenceManager: PersistenceManager!
     
     override func setUp() {
         super.setUp()
         
+        persistenceManager = PersistenceManager(managedObjectContext: TestManagedObjectContext.inMemoryManagedObjectContext())
         sut = CountriesViewController()
     }
     
     override func tearDown() {
         super.tearDown()
+        
+        persistenceManager = nil
+        sut = nil
     }
     
     func testInitialization() {
@@ -30,10 +35,9 @@ class CountriesViewControllerTests: TestCase {
     
     func testFetchingCountriesForUsaQuery() {
         
-        sut.countriesViewModel.countriesService = FakeCountriesService(json: loadJson(.usa), forSearchText: "usa")
+        sut.countriesViewModel.countriesProvider = FakeCountriesProvider(json: loadJson(.usa), forSearchText: "usa", persistenceManager: persistenceManager)
         sut.countriesViewModel.setupQueryObservable(Observable.just("usa"))
         _ = sut.view
-        
         
         let properCountriesCountExpectation = expectation(description: "proper countries count")
         
@@ -47,14 +51,13 @@ class CountriesViewControllerTests: TestCase {
     
     func testFetchingCountriesForCamQuery() {
         
-        sut.countriesViewModel.countriesService = FakeCountriesService(json: loadJson(.cam), forSearchText: "cam")
+        sut.countriesViewModel.countriesProvider = FakeCountriesProvider(json: loadJson(.cam), forSearchText: "cam", persistenceManager: persistenceManager)
         sut.countriesViewModel.setupQueryObservable(Observable.just("cam"))
         _ = sut.view
         
-        
         let properCountriesCountExpectation = expectation(description: "proper countries count")
         
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 3)
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
         properCountriesCountExpectation.fulfill()
         
         waitForExpectations(timeout: 1, handler:  { error in
@@ -62,4 +65,5 @@ class CountriesViewControllerTests: TestCase {
         })
     }
 }
+
 

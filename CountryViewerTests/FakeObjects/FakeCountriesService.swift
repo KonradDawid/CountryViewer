@@ -12,19 +12,23 @@ import SwiftyJSON
 @testable import CountryViewer
 
 
-struct FakeCountriesService: CountriesServiceProtocol {
+class FakeCountriesService: CountriesServiceProtocol {
     
     var searchText: String
     var json: JSON
+    var callsCount: Int = 0
     
     init(json: JSON, forSearchText searchText: String) {
         self.json = json
         self.searchText = searchText
     }
     
-    func getCountriesObservable(searchText: String) -> Observable<Result<[Country]>> {
+    func getCountriesObservable(searchText: String) -> Observable<Result<[JSON]>> {
+        callsCount += 1
+        
         if searchText == self.searchText {
-            return Observable.just(.success(Country.arrayFromJson(json)))
+            let objects: [JSON] = json.array ?? []
+            return Observable.just(.success(objects))
         } else {
             return Observable.just(.success([]))
         }

@@ -14,17 +14,19 @@ struct CountryViewModel {
     // MARK: Properties
     
     let buttonAction: Action?
+    let marked: Bool
     
     
     // MARK: Private properties
     
-    fileprivate let country: Country
+    fileprivate let country: CountryMO
     
     
     // MARK: Initializers
     
-    init(country: Country, buttonAction: Action?) {
+    init(country: CountryMO, marked: Bool, buttonAction: Action?) {
         self.country = country
+        self.marked = marked
         self.buttonAction = buttonAction
     }
 }
@@ -32,11 +34,11 @@ struct CountryViewModel {
 extension CountryViewModel {
     
     var name: String {
-        return country.name
+        return country.name ?? ""
     }
     
     var info: String {
-        return "Capital: \(country.capital), domains: \(country.topLevelDomains.joined(separator: " "))"
+        return "Capital: \((country.capital ?? ""))"
     }
 }
 
