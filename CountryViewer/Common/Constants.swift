@@ -27,7 +27,9 @@ struct Constants {
     struct Parsing {
         struct Country {
             static let nameKey = "name"
+            static let codeKey = "alpha3Code"
             static let captialKey = "capital"
+            static let bordersKey = "borders"
             static let topLevelDomainKey = "topLevelDomain"
         }
     }

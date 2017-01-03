@@ -15,8 +15,16 @@ class CountriesViewModel {
     // MARK: Input properties
     
     var countrySelectionAction: CountryAction?
-    var countryButtonAction: CountryAction = { country in
-        print("You pressed button for: \(country)")
+    
+    lazy var countryButtonAction: CountryAction = { [weak self] country in
+        print("You pressed button for: \(country.name)")
+        print("BORDERS COUNT: \(country.borders?.count)")
+        print("DOMAINS: \(country.domains?.count)")
+        
+        if let seto = country.borders {
+            let set: Set<CountryMO> = seto as! Set<CountryMO>
+            self?.borderCountries.value = set
+        }
     }
     
     
@@ -27,7 +35,8 @@ class CountriesViewModel {
     
     // MARK: Private properties
     
-    private let countries = Variable<[Country]>([])
+    private let countries = Variable<[CountryMO]>([])
+    private let borderCountries = Variable<Set<CountryMO>>([])
     private let disposeBag = DisposeBag()
     
     // MARK: Observables
@@ -39,23 +48,30 @@ class CountriesViewModel {
             .map({ $0.trim() })
             .throttle(0.3, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .flatMapLatest { [weak self] query -> Observable<Result<[Country]>> in
+            .flatMapLatest { [weak self] query -> Observable<Result<[CountryMO]>> in
                 guard !query.isEmpty else {
                     return Observable.just(.failure(CustomError.query))
                 }
-                return self?.countriesService.getCountriesObservable(searchText: query.trim()) ?? Observable.just(Result.success([]))
+                return self?.countriesProvider.getCountriesObservable(searchText: query.trim()) ?? Observable.just(Result.success([]))
             }
             .shareReplay(1)
         
         countriesResultObservable.asObservable()
-            .map { (result: Result<[Country]>) in
+            .map { (result: Result<[CountryMO]>) in
                 return result.successValue ?? []
             }.bindTo(countries)
             .addDisposableTo(disposeBag)
         
-        updateObservable = countriesResultObservable.asObservable()
-            .map { (result: Result<[Country]>) in
+        let countriesCountObservable = countriesResultObservable.asObservable()
+            .map { (result: Result<[CountryMO]>) in
                 return result.map({ $0.count })
+        }
+        
+        let borderCountriesObservable = borderCountries.asObservable()
+        
+        updateObservable = Observable.combineLatest(countriesCountObservable, borderCountriesObservable, resultSelector: { ($0, $1) })
+            .map { (countriesTuple) -> Result<Int> in
+                return countriesTuple.0
             }
             .observeOn(MainScheduler.instance)
     }
@@ -68,11 +84,11 @@ class CountriesViewModel {
     
     func countryViewModel(atIndexPath indexPath: IndexPath) -> CountryViewModel? {
         guard countries.value.count > indexPath.row else { return nil }
-        
         let country = countries.value[indexPath.row]
-        return CountryViewModel(country: country, buttonAction: { [weak self] in
+        let marked = borderCountries.value.contains(country)
+        return CountryViewModel(country: country, marked: marked, buttonAction: { [weak self] in
             self?.countryButtonAction(country)
-            })
+        })
     }
     
     func didSelectRowAt(_ indexPath: IndexPath) {
@@ -82,8 +98,9 @@ class CountriesViewModel {
         countrySelectionAction?(country)
     }
     
+    
     // MARK: Dependencies
     
-    var countriesService: CountriesServiceProtocol = CountriesService()
+    var countriesProvider: CountriesProviderProtocol = CountriesProvider()
 }
 
