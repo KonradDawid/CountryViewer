@@ -18,6 +18,8 @@ class CountryTableViewCell: UITableViewCell {
             nameLabel.text = countryViewModel?.name
             infoLabel.text = countryViewModel?.info
             buttonAction = countryViewModel?.buttonAction
+            let marked = countryViewModel?.marked == true
+            backgroundColor = marked ? UIColor.red : UIColor.clear
         }
     }
     
@@ -30,7 +32,7 @@ class CountryTableViewCell: UITableViewCell {
     private let infoLabel: UILabel = UILabel.styledLabel(weight: .light)
     private let actionButton: UIButton = {
         let button = UIButton.withStyle(.warning)
-        button.setTitle("click!", for: .normal)
+        button.setTitle("borders!", for: .normal)
         return button
     }()
     
