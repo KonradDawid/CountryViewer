@@ -9,6 +9,7 @@ target 'CountryViewer' do
    pod 'SnapKit'
    pod 'Alamofire'
    pod 'SwiftyJSON', '~> 3.0.0'
+   pod 'Reachability'
 
   target 'CountryViewerTests' do
    pod 'RxCocoa'
