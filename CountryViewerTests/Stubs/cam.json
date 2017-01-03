@@ -103,59 +103,5 @@
                "en",
                "fr"
                ]
- },
- {
- "name": "Mozambique",
- "topLevelDomain": [
-                    ".mz"
-                    ],
- "alpha2Code": "MZ",
- "alpha3Code": "MOZ",
- "callingCodes": [
-                  "258"
-                  ],
- "capital": "Maputo",
- "altSpellings": [
-                  "MZ",
-                  "Republic of Mozambique",
-                  "República de Moçambique"
-                  ],
- "relevance": "0",
- "region": "Africa",
- "subregion": "Eastern Africa",
- "translations": {
- "de": "Mosambik",
- "es": "Mozambique",
- "fr": "Mozambique",
- "ja": "モザンビーク",
- "it": "Mozambico"
- },
- "population": 25727911,
- "latlng": [
-            -18.25,
-            35
-            ],
- "demonym": "Mozambican",
- "area": 801590,
- "gini": 45.7,
- "timezones": [
-               "UTC+02:00"
-               ],
- "borders": [
-             "MWI",
-             "ZAF",
-             "SWZ",
-             "TZA",
-             "ZMB",
-             "ZWE"
-             ],
- "nativeName": "Moçambique",
- "numericCode": "508",
- "currencies": [
-                "MZN"
-                ],
- "languages": [
-               "pt"
-               ]
  }
 ]

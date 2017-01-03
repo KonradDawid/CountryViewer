@@ -13,18 +13,26 @@ import RxSwift
 class CountriesViewModelTests: TestCase {
     
     var sut: CountriesViewModel!
+    var fakeCountriesProvider: FakeCountriesProvider!
+    var persistenceManager: PersistenceManagerProtocol!
     var disposeBag = DisposeBag()
     
     override func setUp() {
         super.setUp()
         
+        persistenceManager = PersistenceManager(managedObjectContext: TestManagedObjectContext.inMemoryManagedObjectContext())
+        fakeCountriesProvider = FakeCountriesProvider(json: loadJson(.usa), forSearchText: "USA", persistenceManager: persistenceManager)
         sut = CountriesViewModel()
+        sut.countriesProvider = fakeCountriesProvider
         sut.setupQueryObservable(Observable.just("USA"))
-        sut.countriesService = FakeCountriesService(json: loadJson(.usa), forSearchText: "USA")
     }
     
     override func tearDown() {
         super.tearDown()
+        
+        persistenceManager = nil
+        fakeCountriesProvider = nil
+        sut = nil
     }
     
     func testInitialization() {
@@ -44,7 +52,7 @@ class CountriesViewModelTests: TestCase {
                 
                 let countryViewModel = self.sut.countryViewModel(atIndexPath: IndexPath(row: 0, section: 0))
                 XCTAssertEqual(countryViewModel?.name, "United States")
-                XCTAssertEqual(countryViewModel?.info, "Capital: Washington, D.C., domains: .us")
+                XCTAssertEqual(countryViewModel?.info, "Capital: Washington, D.C.")
                 properCountryViewModelExpectation.fulfill()
             }
         }).addDisposableTo(disposeBag)

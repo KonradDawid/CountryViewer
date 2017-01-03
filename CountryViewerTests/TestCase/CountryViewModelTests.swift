@@ -12,15 +12,22 @@ import XCTest
 class CountryViewModelTests: TestCase {
     
     var sut: CountryViewModel!
+    var persistenceManager: PersistenceManager!
     
     override func setUp() {
         super.setUp()
         
-        sut = CountryViewModel(country: Country(json: loadJson(.germany))!, buttonAction: nil)
+        persistenceManager = PersistenceManager(managedObjectContext: TestManagedObjectContext.inMemoryManagedObjectContext())
+        let country: CountryMO = CountryMO.createInContext(persistenceManager.managedObjectContext)
+        country.setupWithJson(json: loadJson(.germany), persistenceManager: persistenceManager)
+        sut = CountryViewModel(country: country, marked: false, buttonAction: nil)
     }
     
     override func tearDown() {
         super.tearDown()
+        
+        persistenceManager = nil
+        sut = nil
     }
     
     func testInitialization() {
@@ -32,7 +39,7 @@ class CountryViewModelTests: TestCase {
     }
     
     func testInfoExtension() {
-        XCTAssertEqual(sut.info, "Capital: Berlin, domains: .de")
+        XCTAssertEqual(sut.info, "Capital: Berlin")
     }
 }
 
